@@ -36,7 +36,7 @@
 
 .halaman1{
     height: 100vh;
-    background-image: url(img/background/background1.svg);
+    background-image: url(\img\background\background1.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -645,7 +645,7 @@ backdrop-filter: blur(4px);
 }
 
 section{
-    background-image: url(img/background/Desktop\ -\ 22.png);
+    background-image: url(\img\background\Desktop22.png);
     background-position: center;
     background-size: auto;
 
