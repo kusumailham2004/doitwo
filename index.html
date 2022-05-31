@@ -7,19 +7,48 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
     <script src="https://kit.fontawesome.com/0df059300d.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-bottom/">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
 </head>
 <body>
-    
 
-    <a href="#" class="go-top">Go Top</a>
 
-    <div class="halaman1">
+    <nav class="nav">
+        <a href="#home" class="nav__link nav__link--active">
+          <i class="fa fa-home" aria-hidden="true"></i>
+        </a>
+        <a href="#halaman2" class="nav__link ">
+          <i class="fa fa-users" aria-hidden="true"></i>
+        </a>
+        <a href="#halaman3" class="nav__link">
+          <i class="fa fa-calendar-check" aria-hidden="true"></i>
+        </a>
+        <a href="#halaman4" class="nav__link">
+          <i class="fa fa-clock" aria-hidden="true"></i>
+        </a>
+        <a href="#halaman5" class="nav__link">
+          <i class="fa fa-image" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="nav__link">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+        </a>
+        <a href="#halaman9" class="nav__link">
+            <i class="fa fa-sticky-note" aria-hidden="true"></i>
+        </a>
+    </nav>
+
+
+
+    <div class="halaman1" id="home">
         <div class="container">
             <div class="judul">
                 <h3>Undangan Pernikahan</h3>
@@ -39,7 +68,7 @@
     </div>
 
     <div class="halaman23">
-        <div class="halaman2">
+        <div class="halaman2" id="halaman2">
             <div class="pembuka2 text-center">
                 <div class="salam">
                     <p>assalamualaikum</p>
@@ -49,13 +78,13 @@
             <div class="container">
                 <div class="grid2">
                     <div class="row">
-                        <div class="card2">
+                        <div class="card2" data-aos="fade-right">
                             <img class="img-fluid" src="img\Pengantin\pria.svg" alt="Pengantin pria">
                             <h2 class="text-center">Lukman Nulhakim</h2>
                             <h5 class="text-center">Putra ke 5 dari keluarga keluarga</h5>
                             <p class="text-center">account ig</p>
                         </div>
-                        <div class="card2">
+                        <div class="card2" data-aos="fade-left">
                             <img class="img-fluid text-center" src="img\Pengantin\pria.svg" alt="Pengantin pria">
                             <h2 class="text-center">Lukman Nulhakim</h2>
                             <h5 class="text-center">Putra ke 5 dari keluarga keluarga</h5>
@@ -65,10 +94,10 @@
                 </div>
             </div>
         </div>
-        <div class="halaman3">
+        <div class="halaman3" id="halaman3">
             <h1 class="judul-hal3">Jadwal Pernikahan</h1>
             <div class="container">
-                <div class="row">
+                <div class="row" data-aos="fade-up">
                     <div class="card3">
                         <h3>Resepsi</h3>
                         <h5>Senin, 18 Februari 2022 08:00 - 09:00 WIB</h5>
@@ -89,7 +118,7 @@
     
 
     <section>
-        <div class="halaman4">
+        <div class="halaman4" id="halaman4">
             <h1 class="text-center">Countdown Acara</h1>
             <div class="container">
                 <div class="row4">
@@ -114,7 +143,7 @@
             </div>
         </div>
     
-        <div class="halaman5 container-fluid">
+        <div class="halaman5 container-fluid" id="halaman5">
             <h1 class="text-center">Our galery</h1>
             <div class="container">
                 <div class="row5">
@@ -164,7 +193,46 @@
             </div>
         </div>
     
-        
+        <!-- story love -->
+        <div class="story">
+            <div class="heading3" data-aos="fade-up">Story Love</div>
+            <div class="box" id="slide1" data-aos="fade-up">
+            <img src="../assets/img/theme/contoh.png" alt="" />
+            <div class="text">
+                <div class="heading4">Pertama Bertemu</div>
+                <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium atque dignissimos id quod voluptatum, laborum natus, ad sint beatae praesentium pariatur harum eos assumenda illum accusantium. Necessitatibus architecto ab
+                voluptate.
+                </p>
+            </div>
+            </div>
+            <div class="box hidden" id="slide2" data-aos="fade-up">
+            <img src="../assets/img/theme/contoh.png" alt="" />
+            <div class="text">
+                <div class="heading4">Pertama Bertemu</div>
+                <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium atque dignissimos id quod voluptatum, laborum natus, ad sint beatae praesentium pariatur harum eos assumenda illum accusantium. Necessitatibus architecto ab
+                voluptate.
+                </p>
+            </div>
+            </div>
+            <div class="box hidden" id="slide3" data-aos="fade-up">
+            <img src="../assets/img/theme/contoh1.png" alt="" />
+            <div class="text">
+                <div class="heading4">Ketiga Bertemu</div>
+                <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium atque dignissimos id quod voluptatum, laborum natus, ad sint beatae praesentium pariatur harum eos assumenda illum accusantium. Necessitatibus architecto ab
+                voluptate.
+                </p>
+            </div>
+            </div>
+            <div class="list">
+            <div class="heading6 pertama active">Pertama Kenal</div>
+            <div class="heading6 kedua">Menyatakan Cinta</div>
+            <div class="heading6 ketiga">Tunangan</div>
+            </div>
+        </div>
+  
     
         <div class="halaman8 container-fluid py-5">
             <div class="container d-flex justify-content-center align-items-center">
@@ -175,9 +243,51 @@
                 </div>
                 </div>
             </div>
+            <div class="modal8">
+                <!-- Button trigger modal -->
+                <button type="button" class="close btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Gift
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">GIFT</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <P>Kirim melalui nomer rekening dibawah ini :</P>
+                            <div class="tabel">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Methode</th>
+                                        <th scope="col">Atas Nama</th>
+                                        <th scope="col">No. Rek</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">Bank BRI</th>
+                                        <td>Rian</td>
+                                        <td>085794724706</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     
-        <div class="halaman9">
+        <div class="halaman9" id="halaman9">
             <h1 class="text-center" style="color: white;">Buku Tamu</h1>
             <div class="container">
                 <div class="mb-3">
@@ -185,8 +295,11 @@
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Masukan nama Anda">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Kehadiran</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" >
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Hadri atau Tidak</option>
+                        <option value="1">Hadir</option>
+                        <option value="2">Tidak Hadir</option>
+                      </select>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
@@ -248,8 +361,24 @@
         </div>
     </section>
 
-
+<!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     -->
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- <script>
+        new WOW().init;
+    </script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
+
 </body>
 </html>

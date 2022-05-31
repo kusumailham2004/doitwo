@@ -13,30 +13,161 @@
   /* border: 1px solid red; */
 }
 
+/* cover */
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(7px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+    z-index: 999999;
+  }
+  
+  .cover .cover-container {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease 0.3s;
+  }
+  
+  .cover .cover-container .cover-content {
+    background-image: url(../../img/theme/bg-theme1.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+  }
+  
+  .cover .cover-container .cover-content .group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cover .cover-container .cover-content .group .box {
+    /* background-image: url(../../img/theme/cover.png); */
+    background-color: #F3D156;
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 500px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #613838;
+    border-radius: 20px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+  }
+  .cover .cover-container .cover-content .group .box-variasi {
+    background-color: #e5d6dd;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    z-index: 1;
+    transform: rotate(-10deg);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  }
+  .cover-content .group .box p {
+    color: #613838;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 18px;
+    text-align: center;
+  }
+  .cover-content .group .box .nama {
+    color: #613838;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 400px;
+  }
+  .cover-content .group .box .nama-tamu {
+    border: 2px solid #613838;
+    padding: 10px;
+    margin: 20px 0px;
+    max-width: 400px;
+  }
+  
+  .hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .cover .cover-container.hide {
+    transform: scale(0);
+    transform: translateX(-10%);
+  }
 
-
-.go-top {
-	position: fixed;
-	bottom: 2em;
-	right: 2em;
-	text-decoration: none;
-	color: red;
-	background-color: rgba(0, 0, 0, 0.3);
-	font-size: 12px;
-	padding: 1em;
-	display: none;
+.nav {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    width: 90%;
+    height: 50px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: pink;
+    display: flex;
+    margin-left: 5%;
+    overflow-x: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-.go-top:hover {
-	background-color: rgba(0, 0, 0, 0.6);
+.nav__link {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+.nav__link i{
+    font-size: 15px;
+}
+
+.nav__link:hover {
+    background-color: #eeeeee;
+}
+
+.nav__link--active {
+    color: #009578;
+}
+
+.nav__icon {
+    font-size: 18px;
 }
 
 
 
 
 .halaman1{
+    width: 100%;
     height: 100vh;
-    background-image: url(\img\background\background1.svg);
+    background-image: url(img/background/background1.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,17 +253,21 @@ text-shadow: 8px 2px 8px rgba(0, 0, 0, 0.49);
 
 
 .halaman23{
+    width: 100%;
     height: auto;
     padding-bottom: 30px;
-    background-image: url(img/background/background23.svg);
+    /* background-image: url(img/background/background23.svg); */
+    background-color: #FADCDA;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .halaman2{
+    width: 100%;
     padding-top: 30px;
     height: auto;
     padding-bottom: 30px;
+    overflow: hidden;
 }
 .halaman23 .halaman2 .pembuka2{
     text-align: center;
@@ -166,6 +301,9 @@ line-height: 94px;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+.halaman23 .halaman3{
+    width: 100%;
 }
 .halaman23 .halaman3 .judul-hal3{
     text-align: center;
@@ -422,6 +560,73 @@ text-transform: capitalize;
 }
 
 
+/* story */
+.story {
+    /* background-image: url(../../img/theme/bg-detail-theme1.png); */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .story .box {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    transition: 1s all;
+    animation: up 1s forwards ease-in-out;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 50px 0px 20px 0px;
+  }
+  @keyframes up {
+    0% {
+      opacity: 0.5;
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .story .box img {
+    width: 50%;
+    height: 100%;
+  }
+  .story .box .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .story .box.hidden {
+    display: none;
+  }
+  .story .list .heading6.active {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .story .list {
+    display: flex;
+  }
+  .story .list .heading6 {
+    margin-left: 10px;
+  }
+  .story .list .heading6:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
 
 /* halaman 8 start */
 .halaman8{
@@ -483,6 +688,14 @@ border: 1px solid rgba(8, 84, 84, 0.02);
 	background: var(--bc);
 	-webkit-mask: var(--mask-inside);
 	        mask: var(--mask-inside);
+}
+.halaman8 .modal8{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+.halaman8 .modal8 .close{
+    width: 40%;
 }
 @media screen and (max-width: 550px){
     .halaman7 .container .p-2{
@@ -645,7 +858,7 @@ backdrop-filter: blur(4px);
 }
 
 section{
-    background-image: url(\img\background\Desktop22.png);
+    background-image: url(img/background/Desktop22.png);
     background-position: center;
     background-size: auto;
 
