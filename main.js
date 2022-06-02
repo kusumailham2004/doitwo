@@ -1,20 +1,29 @@
-$(document).ready(function() {
-    // Show or hide the sticky footer button
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 200) {
-            $('.go-top').fadeIn(200);
-        } else {
-            $('.go-top').fadeOut(200);
-        }
-    });
-    
-    // Animate the scroll to top
-    $('.go-top').click(function(event) {
-        event.preventDefault();
-        
-        $('html, body').animate({scrollTop: 0}, 300);
-    })
+// Cover
+const closeCover = document.querySelector(".close-cover");
+const cover = document.querySelector(".cover1");
+const coverContainer = document.querySelector(".cover-container");
+
+closeCover.addEventListener("click", () => {
+  setTimeout(() => {
+    cover.classList.add("hide");
+  }, 800);
+  coverContainer.classList.add("hide");
 });
+
+
+
+$(".play-video").click(function () {
+  $(".youtube-video")[0].contentWindow.postMessage('{"event":"command","func":"' + "playVideo" + '","args":""}', "*");
+});
+
+$(".stop-video").click(function () {
+  $(".youtube-video")[0].contentWindow.postMessage('{"event":"command","func":"' + "stopVideo" + '","args":""}', "*");
+});
+
+$(".pause-video").click(function () {
+  $(".youtube-video")[0].contentWindow.postMessage('{"event":"command","func":"' + "pauseVideo" + '","args":""}', "*");
+});
+
 
 var btn = $("#mainNav");
 
@@ -114,70 +123,7 @@ spyScrolling( );
 
 // Cover
 
-// const openModalBtn = document.querySelectorAll(".open1");
-const closeCover = document.querySelector(".close-cover");
-const cover = document.querySelector(".cover1");
-const coverContainer = document.querySelector(".cover-container");
 
-closeCover.addEventListener("click", () => {
-  setTimeout(() => {
-    cover.classList.add("hide");
-  }, 800);
-  coverContainer.classList.add("hide");
-});
-
-
-// modal
-
-const openModalBtn = document.querySelectorAll(".open");
-const closeModal = document.querySelector(".close-modal");
-const modal = document.querySelector(".modal");
-const modalContainer = document.querySelector(".modal-container");
-
-openModalBtn.forEach((openModal) => {
-  openModal.addEventListener("click", () => {
-    modal.classList.remove("hide");
-    modalContainer.classList.remove("hide");
-  });
-});
-closeModal.addEventListener("click", () => {
-  setTimeout(() => {
-    modal.classList.add("hide");
-  }, 800);
-  modalContainer.classList.add("hide");
-});
-
-const slide1 = document.querySelector("#slide1");
-const slide2 = document.querySelector("#slide2");
-const slide3 = document.querySelector("#slide3");
-const pertama = document.querySelector(".pertama");
-const kedua = document.querySelector(".kedua");
-const ketiga = document.querySelector(".ketiga");
-
-pertama.addEventListener("click", function () {
-  slide1.classList.remove("hidden");
-  slide2.classList.add("hidden");
-  slide3.classList.add("hidden");
-  pertama.classList.add("active");
-  kedua.classList.remove("active");
-  ketiga.classList.remove("active");
-});
-kedua.addEventListener("click", function () {
-  slide1.classList.add("hidden");
-  slide2.classList.remove("hidden");
-  slide3.classList.add("hidden");
-  pertama.classList.remove("active");
-  kedua.classList.add("active");
-  ketiga.classList.remove("active");
-});
-ketiga.addEventListener("click", function () {
-  slide1.classList.add("hidden");
-  slide2.classList.add("hidden");
-  slide3.classList.remove("hidden");
-  pertama.classList.remove("active");
-  kedua.classList.remove("active");
-  ketiga.classList.add("active");
-});
 
 // const navHome = document.querySelector(".navHome");
 // const navDetail = document.querySelector(".navDetail");
